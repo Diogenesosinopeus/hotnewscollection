@@ -1,0 +1,22 @@
+{
+    "github": {
+        "per_page": 20,
+        "language_filter": "",
+        "date_range_days": 7
+    },
+    "output": {
+        "date_format": "%Y-%m-%d",
+        "subdir": ""
+    },
+    "news": {
+        "ai_sources": [
+            "https://rsshub.app/36kr/search/ai",
+            "https://rsshub.app/huggingface/daily-papers",
+            "https://www.jiqizhixin.com/rss"
+        ],
+        "shizheng_sources": [
+            "https://rsshub.app/xinhua/news",
+            "https://rsshub.app/people/xinwen"
+        ]
+    }
+}
