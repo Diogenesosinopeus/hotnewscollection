@@ -7,7 +7,7 @@ import json
 import os
 import sys
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
@@ -55,7 +55,7 @@ def fetch_github_trending(cfg):
     days = cfg["github"]["date_range_days"]
     per_page = cfg["github"]["per_page"]
     lang = cfg["github"].get("language_filter", "")
-    date_since = (datetime.now(datetime.UTC) - timedelta(days=days)).strftime("%Y-%m-%d")
+    date_since = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d")
 
     query = f"created:>{date_since}"
     if lang:
